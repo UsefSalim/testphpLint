@@ -1,22 +1,27 @@
 <?php
 
-$data = array(1,2);
-$a = array(1
+$data = [1, 2];
+$a = [1 => 2];
 
-=> 2);
+class Foo
+{
+    public const DATA = 'data';
 
-class Foo{
-    const DATA = 'data';
-    function bar($baz)
+    public function bar($baz)
     {
-        if ($baz = 900)  echo 'Hello!';
-        elseif ($baz = 9000)   echo 'Wait!';
-        else  echo 'Ha?';
-        if (is_array($baz)) 
+        if ($baz = 900) {
+            echo 'Hello!';
+        } elseif ($baz = 9000) {
+            echo 'Wait!';
+        } else {
+            echo 'Ha?';
+        }
+        if (is_array($baz)) {
             foreach ($baz as $b) {
                 echo $b;
             }
-        echo $errorVar.'test test';
+        }
+        // echo $errorVar.'test test';
     }
 }
 
