@@ -26,5 +26,8 @@ jobs:
       - name: Composer Install PHP-CS-Fixer
         run: cd tools/php-cs-fixer && composer install --ansi --prefer-dist --no-interaction --no-progress
 
-      - name: Run Code Quality checks
-        run: vendor/bin/phpstan && tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
+      - name: Run phpstan
+        run: vendor/bin/phpstan 
+
+      - name: Run cs Fixer
+        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
