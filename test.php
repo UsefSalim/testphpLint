@@ -1,32 +1,25 @@
 <?php
 
-$data = [1, 2];
-$a = [1 => 2];
+$data = array(1,2);
+$a = array(1
 
-class Foo
-{
-    public const DATA = 'data';
+=> 2);
 
-    public function bar($baz)
+class Foo{
+    const DATA = 'data';
+    function bar($baz)
     {
-        if ($baz = 900) {
-            echo 'Hello!';
-        } elseif ($baz = 9000) {
-            echo 'Wait!';
-        } else {
-            echo 'Ha?';
-        }
-        if (is_array($baz)) {
+        if ($baz = 900)  echo 'Hello!';
+        elseif ($baz = 9000)   echo 'Wait!';
+        else  echo 'Ha?';
+        if (is_array($baz)) 
             foreach ($baz as $b) {
                 echo $b;
             }
-        }
-
-        // echo $testVar.'test test';
-
+        echo $errorVar.'test test';
     }
 }
-throw new Exception('Error.', 500);
+
 $foo = new Foo();
 $foo->bar(900);
 

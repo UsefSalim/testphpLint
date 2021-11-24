@@ -16,6 +16,9 @@ jobs:
           php-version: ${{ matrix.php }}
 
       - uses: actions/checkout@v2
+      
+      - name: Composer Update
+        run: composer update
 
       - name: Composer Install
         run: composer install --ansi --prefer-dist --no-interaction --no-progress
