@@ -21,7 +21,9 @@ class Foo
                 echo $b;
             }
         }
-        echo $errorVar.'test test';
+
+        // echo $testVar.'test test';
+
     }
 }
 throw new Exception('Error.', 500);
